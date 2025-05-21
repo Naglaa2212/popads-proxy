@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PopAds - Anti AdBlock</title>
+</head>
+<body>
+  <h1>اهلاً بيك في موقع الإعلانات 💸</h1>
+  <p>الإعلانات بتشتغل في الخلفية حتى لو فيه AdBlock 😎</p>
+
+  <!-- سكريبت PopAds Anti-Adblock -->
+  <script type="text/javascript" data-cfasync="false">
+  (function(){
+    var p = window,
+        l = "bd1ed5309dce8d78959db934c7eff9d1",
+        x = [
+          ["siteId", 5191717],
+          ["minBid", 0],
+          ["popundersPerIP", "0"],
+          ["delayBetween", 0],
+          ["default", false],
+          ["defaultPerDay", 0],
+          ["topmostLayer", "auto"]
+        ],
+        c = [
+          "d3d3LmFudGlhZGJsb2Nrc3lzdGVtcy5jb20vcGJpZ3ZpZGVvLm1pbi5jc3M=",
+          "ZDNjb2Q4MHRobjdxbmQuY2xvdWRmcm9udC5uZXQvdlYvbXV2Y2hhcnRzLm1pbi5qcw==",
+          "d3d3LmZoa2ZkZ3d0enVlYW5zLmNvbS9lYmlndmlkZW8ubWluLmNzcw==",
+          "d3d3LmJsb2Jqa3d6Yi5jb20vdW1NWnovbXV2Y2hhcnRzLm1pbi5qcw=="
+        ],
+        r = -1, h, i,
+        v = function(){
+          clearTimeout(i);
+          r++;
+          if (c[r] && !(1773777713000 < (new Date).getTime() && 1 < r)) {
+            h = p.document.createElement("script");
+            h.type = "text/javascript";
+            h.async = true;
+            var t = p.document.getElementsByTagName("script")[0];
+            h.src = "https://" + atob(c[r]);
+            h.crossOrigin = "anonymous";
+            h.onerror = v;
+            h.onload = function() {
+              clearTimeout(i);
+              p[l.slice(0,16) + l.slice(0,16)] || v();
+            };
+            i = setTimeout(v, 5000);
+            t.parentNode.insertBefore(h, t);
+          }
+        };
+    if (!p[l]) {
+      try {
+        Object.freeze(p[l] = x);
+      } catch(e){}
+      v();
+    }
+  })();
+  </script>
+
+</body>
+</html>
